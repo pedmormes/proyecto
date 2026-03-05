@@ -13,6 +13,19 @@ header {
     top: 0;
     z-index: 1000;
     left: 0;
+    /* la línea separadora se dibuja con un pseudo-elemento para no quedar oculta tras el sticky */
+}
+
+/* pseudo-elemento para la línea inferior del header */
+header::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .menu {
