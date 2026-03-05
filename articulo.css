@@ -13,20 +13,8 @@ header {
     top: 0;
     z-index: 1000;
     left: 0;
-    /* la línea separadora se dibuja con un pseudo-elemento para no quedar oculta tras el sticky */
 }
 
-/* pseudo-elemento para la línea inferior del header */
-header::after {
-    content: "";
-    display: block;
-    width: 100vw;
-    height: 2px;
-    background-color: #ccc;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
 
 .menu {
     list-style: none;
@@ -54,6 +42,7 @@ header::after {
 .imagen {
     display: block;
     margin-left: 2rem; /* desplaza la imagen hacia la derecha */
+    margin-top: 2rem; /* separa imagen del header */
     margin-bottom: 1rem;
 }
 
@@ -61,6 +50,6 @@ header::after {
 .separador {
     width: 100vw;
     height: 2px;
-    background-color: #ccc;
+    background-color: #0c0c0c;
     margin-left: calc(-50vw + 50%);
 }
