@@ -1,0 +1,44 @@
+/* Estilos básicos para el menú */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #696868;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #444;
+}
+
+/* Ajuste de posición para la imagen de clase imagen */
+.imagen {
+    display: block;
+    margin-left: 2rem; /* desplaza la imagen hacia la derecha */
+}
