@@ -44,30 +44,6 @@ header {
     margin-bottom: 1rem;
 }
 
-/* estilos para el formulario de subida */
-.upload-form {
-    margin: 1rem 2rem;
-    font-family: sans-serif;
-}
-
-.upload-form input[type="file"] {
-    display: block;
-    margin-top: 0.5rem;
-}
-
-.upload-form button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #696868;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.upload-form button:hover {
-    background-color: #444;
-}
-
 /* Línea separadora que ocupa toda la página */
 .separador {
     width: 100vw;
