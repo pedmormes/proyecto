@@ -161,3 +161,25 @@ h4 {
     font-size: 25px;
     unicode-bidi: isolate;
 }
+
+h1 {
+    font-weight: 500; /* Normal */
+}
+
+/* Seleccionamos el contenedor del formulario */
+form.formulario2 {
+    max-width: 600px;         /* Limita el ancho para que no ocupe toda la pantalla */
+    margin: 40px auto;        /* 'auto' lo centra horizontalmente; 40px da espacio arriba/abajo */
+    padding: 30px;            /* Espacio interno para que el contenido no toque los bordes */
+    background-color: #fff;   /* Fondo blanco para que resalte */
+    border-radius: 8px;       /* Opcional: bordes redondeados como en la imagen */
+}
+
+/* Para que los campos de texto ocupen todo el ancho de esa columna central */
+input[type="text"], 
+input[type="email"], 
+select {
+    width: 100%;              /* Se ajustan al ancho de los 600px del formulario */
+    box-sizing: border-box;   /* Evita que el padding ensanche los campos de más */
+    margin-bottom: 20px;      /* Espacio entre cada campo */
+}
