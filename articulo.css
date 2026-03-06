@@ -53,3 +53,15 @@ header {
     background-color: #0c0c0c;
     margin-left: calc(-50vw + 50%);
 }
+
+b, strong {
+    font-size: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #aca6a6;
+    padding-left: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 25px;
+}
