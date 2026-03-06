@@ -27,6 +27,8 @@ header {
     margin: 0;
 }
 
+
+
 .menu li a {
     display: block;
     padding: 1rem;
@@ -64,4 +66,98 @@ blockquote {
     margin-left: 2rem;
     margin-right: 2rem;
     font-size: 25px;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 2rem;
+    padding: 0;
+}
+
+.campo-formulario {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+}
+
+fieldset legend {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+.campo-formulario label {
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+.campo-formulario select,
+.campo-formulario input[type="text"],
+.campo-formulario input[type="email"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.campo-formulario select:focus,
+.campo-formulario input[type="text"]:focus,
+.campo-formulario input[type="email"]:focus {
+    outline: none;
+    background-color: #e8e8e8;
+}
+
+.opciones-radio {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+.opciones-radio label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: normal;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+
+.boton-envio {
+    padding: 0.75rem 2rem;
+    background-color: #696868;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.boton-envio:hover {
+    background-color: #555;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 25px;
+    unicode-bidi: isolate;
 }
