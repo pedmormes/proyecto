@@ -27,6 +27,8 @@ header {
     margin: 0;
 }
 
+
+
 .menu li a {
     display: block;
     padding: 1rem;
@@ -52,4 +54,132 @@ header {
     height: 2px;
     background-color: #0c0c0c;
     margin-left: calc(-50vw + 50%);
+}
+
+b, strong {
+    font-size: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #aca6a6;
+    padding-left: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 25px;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 2rem;
+    padding: 0;
+}
+
+.campo-formulario {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+}
+
+fieldset legend {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+.campo-formulario label {
+    margin-bottom: 0.5rem;
+    color: #0c0c0c;
+}
+
+.campo-formulario select,
+.campo-formulario input[type="text"],
+.campo-formulario input[type="email"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.campo-formulario select:focus,
+.campo-formulario input[type="text"]:focus,
+.campo-formulario input[type="email"]:focus {
+    outline: none;
+    background-color: #e8e8e8;
+}
+
+.opciones-radio {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+.opciones-radio label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: normal;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+
+.boton-envio {
+    padding: 0.75rem 2rem;
+    background-color: #696868;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.boton-envio:hover {
+    background-color: #555;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 25px;
+    unicode-bidi: isolate;
+}
+
+h1 {
+    font-weight: 500; /* Normal */
+}
+
+/* Seleccionamos el contenedor del formulario */
+form.formulario2 {
+    max-width: 600px;         /* Limita el ancho para que no ocupe toda la pantalla */
+    margin: 40px auto;        /* 'auto' lo centra horizontalmente; 40px da espacio arriba/abajo */
+    padding: 30px;            /* Espacio interno para que el contenido no toque los bordes */
+    background-color: #fff;   /* Fondo blanco para que resalte */
+    border-radius: 8px;       /* Opcional: bordes redondeados como en la imagen */
+}
+
+/* Para que los campos de texto ocupen todo el ancho de esa columna central */
+input[type="text"], 
+input[type="email"], 
+select {
+    width: 100%;              /* Se ajustan al ancho de los 600px del formulario */
+    box-sizing: border-box;   /* Evita que el padding ensanche los campos de más */
+    margin-bottom: 20px;      /* Espacio entre cada campo */
 }
