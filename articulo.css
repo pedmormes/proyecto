@@ -2,6 +2,8 @@
 body {
     margin: 0;
     padding: 0;
+    text-align: left;
+    text-justify: auto;
 }
 
 header {
@@ -26,8 +28,6 @@ header {
 .menu li {
     margin: 0;
 }
-
-
 
 .menu li a {
     display: block;
