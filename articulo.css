@@ -1,14 +1,19 @@
 /* Estilos básicos para el menú */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     text-align: left;
     text-justify: auto;
+    font-size: 16px;
 }
 
 header {
     background-color: #696868;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     position: sticky;
@@ -23,10 +28,13 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menu li {
     margin: 0;
+    flex: 1;
+    min-width: 150px;
 }
 
 .menu li a {
@@ -34,6 +42,7 @@ header {
     padding: 1rem;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 .menu li a:hover {
@@ -43,6 +52,8 @@ header {
 /* Ajuste de posición para la imagen de clase imagen */
 .imagen {
     display: block;
+    max-width: 100%;
+    height: auto;
     margin-left: 2rem; /* desplaza la imagen hacia la derecha */
     margin-top: 2rem; /* separa imagen del header */
     margin-bottom: 1rem;
@@ -50,14 +61,15 @@ header {
 
 /* Línea separadora que ocupa toda la página */
 .separador {
-    width: 100vw;
+    width: 100%;
     height: 2px;
     background-color: #0c0c0c;
-    margin-left: calc(-50vw + 50%);
+    margin-left: 0;
+    margin-right: 0;
 }
 
 b, strong {
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
 }
 
 blockquote {
@@ -65,14 +77,21 @@ blockquote {
     padding-left: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    font-size: 25px;
+    font-size: clamp(16px, 2.5vw, 25px);
+}
+
+p {
+    margin: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Estilos para el formulario */
-.formulario {
+.formulario,
+.formulario2 {
     max-width: 600px;
-    margin: 2rem;
-    padding: 0;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: calc(100% - 4rem);
 }
 
 .campo-formulario {
@@ -122,16 +141,17 @@ fieldset legend {
     display: flex;
     flex-direction: row;
     gap: 0.75rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .opciones-radio label {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     font-weight: normal;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    white-space: normal;
+    flex: 1;
+    min-width: 150px;
 }
 
 
@@ -158,28 +178,150 @@ h4 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: clamp(20px, 2.5vw, 25px);
     unicode-bidi: isolate;
 }
 
 h1 {
     font-weight: 500; /* Normal */
+    font-size: clamp(24px, 3vw, 32px);
+    margin: 1rem 0;
 }
 
-/* Seleccionamos el contenedor del formulario */
-form.formulario2 {
-    max-width: 600px;         /* Limita el ancho para que no ocupe toda la pantalla */
-    margin: 40px auto;        /* 'auto' lo centra horizontalmente; 40px da espacio arriba/abajo */
-    padding: 30px;            /* Espacio interno para que el contenido no toque los bordes */
-    background-color: #fff;   /* Fondo blanco para que resalte */
-    border-radius: 8px;       /* Opcional: bordes redondeados como en la imagen */
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .imagen {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .formulario,
+    .formulario2 {
+        margin: 1rem auto;
+        padding: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .menu li {
+        min-width: auto;
+        flex: 1 1 auto;
+    }
+    
+    .menu li a {
+        padding: 0.75rem;
+        font-size: 14px;
+    }
+    
+    blockquote {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .opciones-radio label {
+        min-width: calc(50% - 0.4rem);
+    }
 }
 
-/* Para que los campos de texto ocupen todo el ancho de esa columna central */
+@media (max-width: 480px) {
+    .menu li a {
+        padding: 0.5rem;
+        font-size: 12px;
+    }
+    
+    .opciones-radio {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .opciones-radio label {
+        min-width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    
+    .formulario,
+    .formulario2 {
+        margin: 0.5rem auto;
+        padding: 0.75rem;
+        width: calc(100% - 1.5rem);
+    }
+    
+    blockquote,
+    p {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .imagen {
+        margin-left: 0.5rem;
+    }
+}
+
+/* Para que los campos de texto ocupen todo el ancho */
 input[type="text"], 
 input[type="email"], 
 select {
-    width: 100%;              /* Se ajustan al ancho de los 600px del formulario */
-    box-sizing: border-box;   /* Evita que el padding ensanche los campos de más */
-    margin-bottom: 20px;      /* Espacio entre cada campo */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Botón flotante para volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #696868;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.scroll-to-top:active {
+    transform: translateY(0);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
